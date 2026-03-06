@@ -1,135 +1,128 @@
-# literAlura
-📚LiterAlura
+📚 LiterAlura
 
-Projeto desenvolvido em Java com Spring Boot para consumir dados de livros através de uma API e armazená-los em um banco de dados. O sistema permite buscar livros pelo título, listar livros cadastrados, listar autores e realizar consultas específicas sobre autores e idiomas.
+Aplicação desenvolvida em Java com Spring Boot que consome dados de uma API pública de livros e armazena as informações em um banco de dados PostgreSQL. O sistema permite pesquisar livros, consultar autores e realizar análises simples sobre os dados cadastrados.
 
- Tecnologias utilizadas
+Este projeto foi desenvolvido como prática de consumo de APIs, persistência de dados e organização de aplicações backend.
 
-Java 17
+🚀 Tecnologias Utilizadas
 
-Spring Boot
+☕ Java 17
 
-Spring Data JPA
+🌱 Spring Boot
 
-PostgreSQL
+🗄 Spring Data JPA
 
-API Gutendex
+🐘 PostgreSQL
 
-Maven
+🔗 API Gutendex
 
-IntelliJ IDEA
+📦 Maven
 
-Git e GitHub
+💻 IntelliJ IDEA
 
-📖 Sobre o projeto
+🐙 Git & GitHub
 
-O LiterAlura é uma aplicação de linha de comando que consome dados da API Gutendex, uma API pública que fornece informações sobre livros do Projeto Gutenberg.
+📖 Funcionalidades
 
-A aplicação permite que o usuário busque livros pelo título. Quando um livro é encontrado, suas informações e as informações do autor são armazenadas no banco de dados.
+O sistema funciona através de um menu interativo no terminal.
 
-Depois disso, o sistema permite realizar diversas consultas sobre os dados armazenados.
+Menu principal
+===== LiterAlura =====
 
-⚙️ Funcionalidades
+1 - Buscar livro pelo título
+2 - Listar livros
+3 - Listar autores
+4 - Autores vivos em determinado ano
+5 - Contar livros por idioma
+0 - Sair
+🔎 Buscar livro pelo título
 
-O sistema possui as seguintes opções de menu:
+Busca livros na API Gutendex e salva os dados no banco de dados.
 
-1️⃣ Buscar livro pelo título
-Busca um livro na API e salva no banco de dados.
+📚 Listar livros
 
-2️⃣ Listar livros
-Exibe todos os livros cadastrados no banco de dados.
+Mostra todos os livros cadastrados no sistema.
 
-3️⃣ Listar autores
-Mostra todos os autores cadastrados.
+✍️ Listar autores
 
-4️⃣ Listar autores vivos em determinado ano
-Permite consultar quais autores estavam vivos em um determinado ano.
+Exibe os autores registrados no banco de dados.
 
-5️⃣ Contar livros por idioma
-Mostra a quantidade de livros cadastrados para cada idioma.
+📅 Autores vivos em determinado ano
 
-0️⃣ Sair
-Encerra o programa.
+Permite descobrir quais autores estavam vivos em um ano específico.
 
-🗄️ Estrutura do projeto
+🌎 Contar livros por idioma
 
-🔗 API utilizada
+Mostra quantos livros estão cadastrados para cada idioma.
 
-A aplicação consome dados da:
+🔗 API Utilizada
 
-API Gutendex
+O sistema utiliza a API Gutendex, que disponibiliza livros do Projeto Gutenberg.
 
-https://gutendex.com/books/
-
-Exemplo de busca:
+Exemplo de requisição:
 
 https://gutendex.com/books/?search=dom+casmurro
-🗃️ Banco de dados
 
-Foi utilizado o banco:
+Documentação oficial:
 
-PostgreSQL
+https://gutendex.com/
 
-As entidades principais são:
+🗃 Banco de Dados
 
-Autor
+O projeto utiliza PostgreSQL para persistência dos dados.
 
-id
-
-nome
-
-birthYear
-
-deathYear
-
-Livro
-
-id
-
-titulo
-
-idioma
-
-autor
-
-▶️ Como executar o projeto
-
+Entidade Autor
+Campo	Tipo
+id	Long
+nome	String
+birthYear	Integer
+deathYear	Integer
+Entidade Livro
+Campo	Tipo
+id	Long
+titulo	String
+idioma	String
+autor	Autor
+⚙️ Como Executar o Projeto
 1️⃣ Clonar o repositório
-
 git clone https://github.com/seu-usuario/literalura.git
+2️⃣ Abrir no IntelliJ
 
-2️⃣ Abrir o projeto no IntelliJ IDEA
+Abra a pasta do projeto no IntelliJ IDEA.
 
-3️⃣ Configurar o banco PostgreSQL no arquivo:
+3️⃣ Configurar o banco de dados
+
+No arquivo:
 
 application.properties
 
-Exemplo:
+Adicione suas configurações do PostgreSQL:
 
 spring.datasource.url=jdbc:postgresql://localhost:5432/literalura
 spring.datasource.username=postgres
-spring.datasource.password=senha
+spring.datasource.password=sua_senha
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+4️⃣ Executar o projeto
 
-4️⃣ Executar a classe principal:
+Execute a classe:
 
 LiterAluraApplication
 
-O menu será exibido no terminal.
+O menu aparecerá no terminal.
 
-🎯 Objetivo do projeto
+🎯 Objetivo do Projeto
 
-Este projeto foi desenvolvido com o objetivo de praticar:
+Este projeto foi desenvolvido para praticar:
 
-Consumo de API
+Consumo de APIs REST
 
-Manipulação de dados JSON
+Conversão de JSON para objetos Java
 
-Persistência de dados com JPA
+Persistência com Spring Data JPA
 
-Integração com banco de dados
+Integração com PostgreSQL
 
 Estruturação de projetos Spring Boot
 
@@ -137,5 +130,5 @@ Estruturação de projetos Spring Boot
 
 Viviane Lisboa dos Santos
 
-Estudante de Engenharia de Software
-Católica de Brasília
+🎓 Estudante de Engenharia de Software
+🏫 Católica de Brasília
